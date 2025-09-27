@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Administrativo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registo Administrativo</h1>
+        <form action="php/.php" method="GET">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" name="nombre" id="nombre" required>
+            
+            <label for="Administrador">Administrador:</label>
+            <select name="Administrador" id="Administrador" required>
+            <option value="">Seleccionar</option>
+            <option value="1">Director</option>
+            <option value="2">Instructor</option>
+            <input type="submit" value="Registrar ">
+        </form>
+
+        <div id="resultado">
+        </div>
+    </div>
+
+
+</body>
+</html>
