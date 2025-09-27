@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Administrativo</title>
-    <!-- Estilos generales y del menú -->
+    <title>Gestión de Préstamos - INSAM</title>
+    <!-- Estilos generales y del menú (Rojo/Amarillo) -->
     <link rel="stylesheet" href="CSS/style_header.css">
-    <!-- Estilos específicos del formulario (con colores Azul/Amarillo) -->
+    <!-- Estilos específicos del formulario (Azul/Rojo/Amarillo) -->
     <link rel="stylesheet" href="CSS/ingresar_styles.css">
     <!-- Fuente moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,9 +16,7 @@
     <!-- HEADER (Menú de Navegación) -->
     <header class="main-header">
         <div class="header-wrap">
-          <a href="Inventarios instrumentos muicales insam.html" class="logo-header">
-                    <span>INS</span>
-                </a>
+            <div class="logo-header">INS</div>
             <nav class="nav-header">
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbtn">
@@ -31,44 +29,55 @@
                     <ul class="main-menu">
                         <li class="menu-item"><a href="Inventarios instrumentos muicales insam.html">Inicio</a></li>
                         <li class="menu-item"><a href="ingresar.html">Ingresar</a></li>
-                        <li class="menu-item"><a href="#">Catálogo</a></li>
-                        <li class="menu-item"><a href="#">Préstamos</a></li>
+                        <li class="menu-item"><a href="Catalogo.html">Catálogo</a></li>
+                        <li class="menu-item"><a href="Prestamos.html">Préstamos</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- CUERPO PRINCIPAL / FORMULARIO -->
+    <!-- CUERPO PRINCIPAL / FORMULARIO DE PRÉSTAMO -->
     <main class="main-content">
         <div class="login-container">
-            <h2>Registro Administrativo</h2>
-            <form action="php/.php" method="GET">
+            <h2>Registrar Préstamo de Instrumento</h2>
+            <form action="php/registrar_prestamo.php" method="POST">
                 
+                <!-- Datos del Solicitante -->
                 <div class="form-group">
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="solicitante">Nombre del Estudiante:</label>
+                    <input type="text" name="solicitante" id="solicitante" placeholder="Nombre completo del alumno" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="Administrador">Tipo de Administrador:</label>
-                    <select name="Administrador" id="Administrador" required>
-                        <option value="">Seleccionar rol</option>
-                        <option value="1">Director</option>
-                        <option value="2">Instructor</option>
+                    <label for="grado">Grado y Sección:</label>
+                    <input type="text" name="grado" id="grado" placeholder="Ej: 1° Bachillerato 'A'" required>
+                </div>
+                
+                <!-- Datos del Préstamo -->
+                <div class="form-group">
+                    <label for="instrumento">Instrumento a Prestar:</label>
+                    <select name="instrumento" id="instrumento" required>
+                        <option value="">Seleccionar Instrumento</option>
+                        <option value="trompeta">Trompeta</option>
+                        <option value="saxofon">Saxofón</option>
+                        <option value="clarinete">Clarinete</option>
+                        <option value="bombo">Bombo</option>
+                        <option value="lira">Lira</option>
+                        <!-- Se pueden añadir más opciones aquí -->
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">Crear Contraseña:</label>
-                    <input type="password" name="password" id="password" required>
+                    <label for="fecha_devolucion">Fecha Límite de Devolución:</label>
+                    <input type="date" name="fecha_devolucion" id="fecha_devolucion" required>
                 </div>
                 
-                <input type="submit" class="btn-login" value="Registrar">
+                <input type="submit" class="btn-login" value="Confirmar Préstamo">
             </form>
 
             <div class="login-footer">
-                <p>¿Ya tienes cuenta? <a href="ingresar.html">Ingresa aquí</a></p>
+                <p>Usa este formulario solo para registrar **Salidas** de inventario.</p>
             </div>
             
             <div id="resultado">

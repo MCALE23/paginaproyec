@@ -1,90 +1,175 @@
+/* ESTILOS GLOBALES Y TIPOGRAFÍA 
+    Se ajusta el fondo de rojo a gris claro para coincidir con el diseño Tailwind
+*/
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f70000;
+    margin: 0;
+    /* Usando Inter, como en la versión HTML, y fondo gris claro */
+    font-family: 'Inter', sans-serif; 
+    background-color: #f3f4f6; /* Fondo de la página */
+    min-height: 100vh;
 }
 
+/* HEADER 
+*/
 .main-header {
-  background-color: #ff0000;
-  color: rgb(255, 0, 0);
-  padding: 15px 0;
+    background-color: #dc2626; /* Rojo de Tailwind (bg-red-600) */
+    color: white; /* El texto debe ser blanco */
+    padding: 0; /* padding se maneja internamente en el contenedor */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* Sombra (shadow-lg) */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
+.header-container {
+    max-width: 1280px; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+
+/* Contenedor Flex para el header */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem; /* h-16 */
+}
+
+/* Logo (INS) */
 .logo-header {
-  font-size: 28px;
-  text-decoration: none;
-  color: rgb(255, 0, 0);
+    flex-shrink: 0;
+    color: #dc2626; /* Color del texto dentro del círculo blanco */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 9999px; /* rounded-full */
+    height: 2rem; /* h-8 */
+    width: 2rem; /* w-8 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-header span {
-  color: #f39c12;
+    color: #dc2626; /* Asegura el color rojo para 'INS' */
+    font-size: 0.875rem; /* text-sm */
 }
 
-.nav.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* Menú de Navegación */
 .main-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    display: none; /* Oculto por defecto, visible en desktop */
+    gap: 2rem; /* space-x-8 */
+    padding: 0;
+    margin: 0;
+}
+
+/* Media query para desktop: mostrar el menú */
+@media (min-width: 768px) { /* md:flex */
+    .main-menu {
+        display: flex;
+    }
 }
 
 .menu-item a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-weight: 500; /* font-medium */
+    transition: color 0.3s ease;
 }
 
 .menu-item a:hover {
-  color: #f39c12;
+    color: #fca5a5; /* red-200 en hover */
 }
 
+/* CATÁLOGO Y GRID 
+*/
 .catalogo {
-  padding: 40px;
-  text-align: center;
+    max-width: 1280px; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 3rem; /* py-12 */
+    padding-bottom: 3rem; /* py-12 */
+    text-align: center;
 }
 
 .catalogo h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    color: #1f2937; /* gray-900 */
+    margin-bottom: 2.5rem; /* mb-10 */
 }
 
 .instrumentos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+    display: grid;
+    /* Configuración por defecto (mobile): 1 columna */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    gap: 2rem; /* gap-8 */
 }
 
+/* Media query para tablet: 2 columnas */
+@media (min-width: 640px) { /* sm:grid-cols-2 */
+    .instrumentos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Media query para laptop: 3 columnas */
+@media (min-width: 1024px) { /* lg:grid-cols-3 */
+    .instrumentos-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Media query para desktop grande: 4 columnas */
+@media (min-width: 1280px) { /* xl:grid-cols-4 */
+    .instrumentos-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* TARJETAS DE INSTRUMENTOS 
+*/
 .instrumento-card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+    background-color: white;
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    transition: all 0.3s ease;
 }
 
 .instrumento-card:hover {
-  transform: scale(1.03);
-}
-
-.instrumento-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+    transform: translateY(-4px); /* hover:-translate-y-1 */
 }
 
 .instrumento-card h3 {
-  margin-top: 10px;
-  font-size: 20px;
-  color: #333;
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* gray-900 */
+    margin-top: 0;
+    margin-bottom: 1rem; /* mb-4 */
+    text-align: center;
 }
 
+/* Estilos de Imagen */
+.instrumento-card img {
+    width: 100%; /* w-full */
+    height: 12rem; /* h-48 */
+    object-fit: contain; /* object-contain */
+    border-radius: 0.5rem; /* rounded-lg */
+    margin-bottom: 1rem; /* mb-4 */
+    background-color: #f9fafb; /* bg-gray-50 */
+}
+
+/* Estilos de Descripción */
 .instrumento-card p {
-  font-size: 14px;
-  color: #666;
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* gray-600 */
+    text-align: center;
 }

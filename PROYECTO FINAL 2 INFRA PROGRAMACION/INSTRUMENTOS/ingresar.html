@@ -1,38 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro Administrativo</title>
-  <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar | INS Administrativo</title>
+    
+    <!-- Llama al CSS del encabezado/navegación -->
+    <link rel="stylesheet" href="CSS/style_header.css">
+    
+    <!-- Llama al CSS específico del formulario de ingreso -->
+    <link rel="stylesheet" href="CSS/ingresar_styles.css">
+
+    <!-- Enlace a la fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header"> 
-    <div class="header-wrap">
-      <div class="wrap-logo-header">
-       <a href="/" class="logo-header">
-       </a>
-    </div>
-     <div class="wrap-nap-header">
-      <nav class="nav header">
-        <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
+    
+    <!-- ========================================
+         HEADER: Se mantiene el estilo de navegación en todas las páginas
+         ======================================== -->
+    <header class="main-header"> 
+        <div class="header-wrap">
+            <div class="wrap-logo-header">
+               <a href="Inventarios instrumentos muicales insam.html" class="logo-header">
+                   <!-- El logo original apuntaba a un archivo de imagen, aquí simulo el círculo con texto -->
+                   <span>INS</span> 
+               </a>
+           </div>
+            <div class="wrap-nap-header">
+             <nav class="nav header">
+               <input type="checkbox" id="check">
+             <label for="check" class="checkbtn">
+       
+                <!-- Ícono de menú hamburguesa -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+       
+                </label>
+               <ul class="main-menu">
+                   <li class="menu-item"><a href="Catalogo.html">Instrumentos</a></li>
+                   <li class="menu-item"><a href="Prestamos.html">Préstamos</a></li>
+                   <li class="menu-item"><a id="nav-main-contact" href="Contacto.html">Contacto</a></li>
+               </ul>   
+             </nav>
+            </div>
+        </div>
+    </header>
 
-          <i>
-            <img src="img/logo.insam.png">
-          </i>
+    <!-- ========================================
+         CONTENIDO PRINCIPAL: Formulario de Ingreso
+         ======================================== -->
+    <main class="main-content">
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="usuario">Usuario o NIE</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre de usuario o NIE" required>
+                </div>
 
-        </label>
-        <ul class="main-menu">
-            <li class="menu-item"><a href="Catalogo.html">Instrumentos</a></li>
-            <li class="menu-item"><a href="Prestamos.html">Préstamos</a></li>
-            <li class="menu-item"><a id="nav-main-contact" href="Contacto.html">Contacto</a></li>
-        </ul>   
-      </nav>
-     </div>
-    </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                </div>
 
-  </header>
+                <button type="submit" class="btn-login">Ingresar</button>
+            </form>
+
+            <div class="login-footer">
+                <p>¿Olvidó su contraseña? <a href="#">Recuperar</a></p>
+                <p>¿No tiene cuenta? <a href="Registro.html">Regístrese aquí</a></p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
-

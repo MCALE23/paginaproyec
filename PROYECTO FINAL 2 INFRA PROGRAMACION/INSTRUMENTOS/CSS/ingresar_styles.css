@@ -1,0 +1,127 @@
+/*
+========================================
+SECCIÓN DE INGRESO (LOGIN/REGISTRO) - COLORES: AZUL, ROJO, AMARILLO
+========================================
+*/
+
+.main-content {
+    /* Centra el contenedor principal en la pantalla, ocupando el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    /* Ajusta la altura para que ocupe toda la pantalla menos el header */
+    min-height: calc(100vh - 80px); 
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para el formulario */
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 5px solid #1565C0; /* Barra superior azul para impacto */
+}
+
+.login-container:hover {
+    transform: translateY(-2px);
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    color: #C62828; /* Rojo: Usado para el título como color secundario */
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* --- CAMPOS DE FORMULARIO --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; /* Más peso para la etiqueta */
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd; /* Borde más claro por defecto */
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #1565C0; /* Azul al enfocar */
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.3); /* Sombra azul */
+    outline: none;
+}
+
+/* --- BOTÓN DE ENVIAR --- */
+.btn-login {
+    width: 100%;
+    padding: 14px; /* Botón más alto */
+    background-color: #1565C0; /* Azul principal para el botón */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes un poco más grandes */
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.btn-login:hover {
+    background-color: #0D47A1; /* Azul más oscuro al pasar el ratón */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login:active {
+    transform: translateY(1px); /* Efecto de "presión" al hacer clic */
+}
+
+/* --- ENLACES ADICIONALES --- */
+.login-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.login-footer p {
+    margin: 5px 0;
+}
+
+.login-footer a {
+    color: #FFC107; /* Amarillo para enlaces de contraste */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Ligera sombra para destacar */
+}
+
+.login-footer a:hover {
+    color: #e6a200;
+    text-decoration: underline;
+}
+
+/* --- Responsive (Ajuste en pantallas muy pequeñas) --- */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    .login-container h2 {
+        font-size: 1.7rem;
+    }
+}
