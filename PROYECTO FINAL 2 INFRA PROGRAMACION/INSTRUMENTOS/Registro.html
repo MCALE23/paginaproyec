@@ -4,26 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Administrativo</title>
+        <link rel="stylesheet" href="CSS/style_header.css">
+        <link rel="stylesheet" href="CSS/ingresar_styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Registo Administrativo</h1>
-        <form action="php/.php" method="GET">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" name="nombre" id="nombre" required>
-            
-            <label for="Administrador">Administrador:</label>
-            <select name="Administrador" id="Administrador" required>
-            <option value="">Seleccionar</option>
-            <option value="1">Director</option>
-            <option value="2">Instructor</option>
-            <input type="submit" value="Registrar ">
-        </form>
-
-        <div id="resultado">
+    
+        <header class="main-header">
+        <div class="header-wrap">
+          <a href="Inventarios instrumentos muicales insam.html" class="logo-header">
+                    <span>INS</span>
+                </a>
+            <nav class="nav-header">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                                        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 448 512">
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </label>
+                <div class="wrap-nap-header">
+                    <ul class="main-menu">
+                        <li class="menu-item"><a href="Inventarios instrumentos muicales insam.html">Inicio</a></li>
+                        <li class="menu-item"><a href="ingresar.html">Ingresar</a></li>
+                        <li class="menu-item"><a href="#">Catálogo</a></li>
+                        <li class="menu-item"><a href="#">Préstamos</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </div>
+    </header>
 
+        <main class="main-content">
+        <div class="login-container">
+            <h2>Registro Administrativo</h2>
+            <form action="php/.php" method="GET">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Administrador">Tipo de Administrador:</label>
+                    <select name="Administrador" id="Administrador" required>
+                        <option value="">Seleccionar rol</option>
+                        <option value="1">Director</option>
+                        <option value="2">Instructor</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Crear Contraseña:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                
+                <input type="submit" class="btn-login" value="Registrar">
+            </form>
+
+            <div class="login-footer">
+                <p>¿Ya tienes cuenta? <a href="ingresar.html">Ingresa aquí</a></p>
+            </div>
+            
+            <div id="resultado">
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>

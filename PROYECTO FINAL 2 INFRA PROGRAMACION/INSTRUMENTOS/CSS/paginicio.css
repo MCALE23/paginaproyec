@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #FFC107;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffd76d;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url('../img/banda.jpg'); 
+    background-size: cover; 
+    background-position: center center;
+    background-attachment: fixed; 
+    overflow-x: hidden;
+}
+
+#container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #FFC107;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    font-size: 1.1rem;
+    color: #ddd; 
+    padding: 0 15px;
+}
+
+#container + h1 { 
+    font-size: 2rem;
+    color: #C62828; 
+    background-color: transparent; 
+    padding: 20px 0;
+    margin: 0;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+    border-top: none; 
+}
+
+#container + h1 + p {
+    color: #ffffff; 
+    background-color: transparent; 
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+
+#container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin: 30px auto;
+}
+
+.links-container {
+    background-color: transparent; /* Ahora es transparente */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    border-top: 1px solid transparent; /* Quitamos el borde sólido */
+}
+
+.link-box {
+    background-color: #C62828; 
+    border-radius: 8px;
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link-box a {
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: block; 
+    width: 100%;
+    padding: 15px 30px; 
+    text-align: center;
+}
+
+.link-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.link-box:hover a {
+    color: #FFC107; 
+}
+
+.link-box:hover {
+    background-color: #B71C1C; 
+}
+
+.registro-btn {
+    background-color: #1565C0; 
+}
+
+.registro-btn:hover {
+    background-color: #0D47A1;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .links-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .link-box {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .link-box a {
+        padding: 15px; 
+    }
+}

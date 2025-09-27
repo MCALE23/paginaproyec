@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Préstamos - INSAM</title>
+    <!-- Estilos generales y del menú (Rojo/Amarillo) -->
+    <link rel="stylesheet" href="CSS/style_header.css">
+    <!-- Estilos específicos del formulario (Azul/Rojo/Amarillo) -->
+    <link rel="stylesheet" href="CSS/ingresar_styles.css">
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- HEADER (Menú de Navegación) -->
+    <header class="main-header">
+        <div class="header-wrap">
+            <div class="logo-header">INS</div>
+            <nav class="nav-header">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <!-- Icono de Hamburguesa (Menú Móvil) -->
+                    <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 448 512">
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </label>
+                <div class="wrap-nap-header">
+                    <ul class="main-menu">
+                        <li class="menu-item"><a href="Inventarios instrumentos muicales insam.html">Inicio</a></li>
+                        <li class="menu-item"><a href="ingresar.html">Ingresar</a></li>
+                        <li class="menu-item"><a href="Catalogo.html">Catálogo</a></li>
+                        <li class="menu-item"><a href="Prestamos.html">Préstamos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL / FORMULARIO DE PRÉSTAMO -->
+    <main class="main-content">
+        <div class="login-container">
+            <h2>Registrar Préstamo de Instrumento</h2>
+            <form action="php/registrar_prestamo.php" method="POST">
+                
+                <!-- Datos del Solicitante -->
+                <div class="form-group">
+                    <label for="solicitante">Nombre del Estudiante:</label>
+                    <input type="text" name="solicitante" id="solicitante" placeholder="Nombre completo del alumno" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="grado">Grado y Sección:</label>
+                    <input type="text" name="grado" id="grado" placeholder="Ej: 1° Bachillerato 'A'" required>
+                </div>
+                
+                <!-- Datos del Préstamo -->
+                <div class="form-group">
+                    <label for="instrumento">Instrumento a Prestar:</label>
+                    <select name="instrumento" id="instrumento" required>
+                        <option value="">Seleccionar Instrumento</option>
+                        <option value="trompeta">Trompeta</option>
+                        <option value="saxofon">Saxofón</option>
+                        <option value="clarinete">Clarinete</option>
+                        <option value="bombo">Bombo</option>
+                        <option value="lira">Lira</option>
+                        <!-- Se pueden añadir más opciones aquí -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha_devolucion">Fecha Límite de Devolución:</label>
+                    <input type="date" name="fecha_devolucion" id="fecha_devolucion" required>
+                </div>
+                
+                <input type="submit" class="btn-login" value="Confirmar Préstamo">
+            </form>
+
+            <div class="login-footer">
+                <p>Usa este formulario solo para registrar **Salidas** de inventario.</p>
+            </div>
+            
+            <div id="resultado">
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

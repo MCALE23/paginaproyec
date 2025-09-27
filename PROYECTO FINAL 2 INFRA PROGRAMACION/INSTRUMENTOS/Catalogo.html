@@ -1,116 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro Administrativo</title>
-  <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Administrativo - Catálogo</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
-  <header class="main-header"> 
-    <div class="header-wrap">
-      <div class="wrap-logo-header">
-       <a href="/" class="logo-header">
-       </a>
-    </div>
-     <div class="wrap-nap-header">
-      <nav class="nav header">
-        <input type="checkbox" id="check">
-       <label for="check" class="checkbtn">
+<body class="min-h-screen">
 
-          <i>
-            <img src="img/logo.insam.png">
-          </i>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="nav-header">
+                <a href="Inventarios instrumentos muicales insam.html" class="logo-header">
+                    <span>INS</span>
+                </a>
+                
+                <nav>
+                    <ul class="main-menu">
+                        <li class="menu-item"><a href="Catalogo.html">Instrumentos</a></li>
+                        <li class="menu-item"><a href="Prestamos.html">Préstamos</a></li> 
+                        <li class="menu-item"><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
 
-        </label>
-        <ul class="main-menu">
-       <li class="menu-item"><a href="Catalogo.html">Instrumentos</a></li>
-       <li class="menu-item"><a href="Prestamos.html">Préstamos</a></li>      
-       <li class="menu-item"><a id="nav-main-contact" href="Contacto.html">Contacto</a></li>
-       </ul>
+                <div class="mobile-menu-button">
+                    <button>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      </nav>
-     </div>
-    </div>
+    <section class="catalogo">
+        <h2>Catálogo de Instrumentos</h2>
+        
+        <div class="instrumentos-grid">
+            
+            <div class="instrumento-card">
+                <a href="Lira.html">
+                    <h3>Lira</h3>
+                    <img 
+                        src="https://i.imgur.com/Xukj3H3.png" 
+                        alt="Lira" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Lira+Imagen+Falla'"
+                    >
+                </a>
+                <p>Instrumento melódico de percusión, ideal para desfiles.</p>
+            </div>
 
-  </header>
-  <section class="catalogo">
-  <h2>Catálogo de Instrumentos</h2>
-  <div class="instrumentos-grid">
-    <div class="instrumento-card">
-      <a href="Lira.html">
-        <h3>Lira</h3>
-      <img src="img/lira.jpg" alt="Lira"></a>
-      <p>Instrumento melódico de percusión, ideal para desfiles.</p>
-    </div>
-    <div class="instrumento-card">
-  <a href="Clarinete.html">
-    <h3>Clarinete</h3>
-    <img src="img/clarinete.jpg" alt="Clarinete">
-  </a>
-  <p>Instrumento de viento madera con sonido suave y expresivo.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Clarinete.html">
+                    <h3>Clarinete</h3>
+                    <img src="https://www.melomanodigital.com/wp-content/uploads/2012/03/Clarinete.png" alt="Clarinete" class="instrumento-img">
+                </a>
+                <p>Instrumento de viento madera con sonido suave y expresivo.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Saxofon.html">
-    <h3>Saxofón</h3>
-    <img src="img/saxofon.jpg" alt="Saxofón">
-  </a>
-  <p>Viento metal con gran presencia en jazz y bandas escolares.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Saxofon.html">
+                    <h3>Saxofón</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Yamaha_Saxophone_YAS-62.tif/lossy-page1-320px-Yamaha_Saxophone_YAS-62.tif.jpg" alt="Saxofón" class="instrumento-img">
+                </a>
+                <p>Viento metal con gran presencia en jazz y bandas escolares.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Trompeta.html">
-    <h3>Trompeta</h3>
-    <img src="img/trompeta.jpg" alt="Trompeta">
-  </a>
-  <p>Sonido brillante y potente, esencial en cualquier banda.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Trompeta.html">
+                    <h3>Trompeta</h3>
+                    <img 
+                        src="https://i.imgur.com/qHCGDDH.png" 
+                        alt="Trompeta" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Trompeta+Imagen+Falla'"
+                    >
+                </a>
+                <p>Sonido brillante y potente, esencial en cualquier banda.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Guido.html">
-    <h3>Guido</h3>
-    <img src="img/guido.jpg" alt="Guido">
-  </a>
-  <p>Instrumento de percusión tradicional, rítmico y festivo.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Guido.html">
+                    <h3>Guido</h3>
+                    <img 
+                        src="https://i.imgur.com/6ly322f.png" 
+                        alt="Guido" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Guido+Imagen+Falla'"
+                    >
+                </a>
+                <p>Instrumento de percusión tradicional, rítmico y festivo.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="TrombonChico.html">
-    <h3>Trombón chico</h3>
-    <img src="img/trombon-chico.jpg" alt="Trombón chico">
-  </a>
-  <p>Versión compacta del trombón, ideal para jóvenes músicos.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Tuba.html">
+                    <h3>Tuba</h3>
+                    <img 
+                        src="https://i.imgur.com/GI3coJa.png" 
+                        alt="Tuba" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Tuba+Imagen+Falla'"
+                    >
+                </a>
+                <p>Base sonora de la banda, con tonos graves y profundos.</p>
+            </div>
+            
+            <div class="instrumento-card">
+                <a href="Trombon.html">
+                    <h3>Trombón</h3>
+                    <img 
+                        src="https://i.imgur.com/gpYNk7S.png" 
+                        alt="Trombón" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Trombón+Imagen+Falla'"
+                    >
+                </a>
+                <p>Viento metal con vara deslizante, sonido poderoso.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Tuba.html">
-    <h3>Tuba</h3>
-    <img src="img/tuba.jpg" alt="Tuba">
-  </a>
-  <p>Base sonora de la banda, con tonos graves y profundos.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Batacas.html">
+                    <h3>Batacas</h3>
+                    <img 
+                        src="https://i.imgur.com/yoEevNn.png" 
+                        alt="Batacas" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Batacas+Imagen+Falla'"
+                    >
+                </a>
+                <p>Batería portátil para ritmos marcados y dinámicos.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Trombon.html">
-    <h3>Trombón</h3>
-    <img src="img/trombon.jpg" alt="Trombón">
-  </a>
-  <p>Viento metal con vara deslizante, sonido poderoso.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Timbales.html">
+                    <h3>Timbales</h3>
+                    <img 
+                        src="https://i.imgur.com/J6dAXdR.png" 
+                        alt="Timbales" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Timbales+Imagen+Falla'"
+                    >
+                </a>
+                <p>Tambores de percusión latina con sonido metálico y rítmico.</p>
+            </div>
+            
+            <div class="instrumento-card">
+                <a href="Bombo.html">
+                    <h3>Bombo</h3>
+                    <img 
+                        src="https://i.imgur.com/QZbOYyz.png" 
+                        alt="Bombo" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Bombo+Imagen+Falla'"
+                    >
+                </a>
+                <p>Percusión grave que marca el pulso de la banda.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Batacas.html">
-    <h3>Batacas</h3>
-    <img src="img/batacas.jpg" alt="Batacas">
-  </a>
-  <p>Batería portátil para ritmos marcados y dinámicos.</p>
-</div>
+            <div class="instrumento-card">
+                <a href="Congas.html">
+                    <h3>Congas</h3>
+                    <img 
+                        src="https://i.imgur.com/zBEed2W.png" 
+                        alt="Congas" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Congas+Imagen+Falla'"
+                    >
+                </a>
+                <p>Tambores altos y estrechos, esenciales para la música latina y salsa.</p>
+            </div>
 
-<div class="instrumento-card">
-  <a href="Bombo.html">
-    <h3>Bombo</h3>
-    <img src="img/bombo.jpg" alt="Bombo">
-  </a>
-  <p>Percusión grave que marca el pulso de la banda.</p>
-</div> 
+            <div class="instrumento-card">
+                <a href="BaritonoMarcha.html">
+                    <h3>Barítono de marcha</h3>
+                    <img 
+                        src="https://i.imgur.com/dBHmedP.png" 
+                        alt="Barítono de marcha" 
+                        class="instrumento-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x192/474747/ffffff?text=Barítono+Imagen+Falla'"
+                    >
+                </a>
+                <p>Viento metal que aporta la voz de tenor/barítono en la banda.</p>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>

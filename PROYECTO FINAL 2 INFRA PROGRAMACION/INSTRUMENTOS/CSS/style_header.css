@@ -1,0 +1,176 @@
+/*
+========================================
+ESTILOS GENERALES Y RESET
+========================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Usando una fuente moderna */
+}
+
+body {
+    background-color: #ffffff; /* Fondo muy claro */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+========================================
+HEADER Y NAVEGACIÓN
+========================================
+*/
+
+.main-header {
+    background-color: #C62828; /* Rojo Intenso (Color principal) */
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrap {
+    max-width: 1200px; /* Ancho máximo para el contenido de escritorio */
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Espacia logo y menú */
+    align-items: center;
+}
+
+/* --- LOGO INS --- */
+.logo-header {
+    /* Círculo blanco con texto rojo para INS */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #FFC107; /* Amarillo Brillante */
+    border-radius: 50%;
+    color: #C62828; /* Texto INS Rojo */
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo-header:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.7); /* Brillo amarillo */
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.wrap-nap-header {
+    /* Contenedor del menú en escritorio */
+    display: flex;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex; /* Muestra los ítems en fila en escritorio */
+    gap: 30px;
+}
+
+.menu-item a {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+    /* Efecto subrayado */
+    border-bottom: 2px solid transparent;
+}
+
+.menu-item a:hover {
+    color: #FFC107; /* Amarillo para el hover */
+    border-bottom: 2px solid #FFC107;
+}
+
+/*
+========================================
+MENÚ HAMBURGUESA (SÓLO PARA MÓVILES)
+========================================
+*/
+
+#check {
+    display: none; /* Oculta la casilla de verificación */
+}
+
+.checkbtn {
+    /* Estilo del botón de hamburguesa */
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none; /* Oculto por defecto, visible en móvil */
+    line-height: 0; /* Asegura que la imagen no tenga espacio extra */
+}
+
+.checkbtn svg {
+    /* Asegura que el SVG sea visible y blanco */
+    display: block;
+    filter: brightness(0) invert(1); /* Hace el icono blanco si no lo es */
+}
+
+/*
+========================================
+MEDIA QUERIES (ADAPTACIÓN A MÓVILES)
+========================================
+*/
+
+@media (max-width: 768px) {
+    .header-wrap {
+        padding: 15px 20px; /* Más padding vertical en móvil */
+    }
+
+    /* Mostrar botón de hamburguesa */
+    .checkbtn {
+        display: block;
+    }
+
+    /* Ocultar menú en línea en móvil por defecto */
+    .main-menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        background: #B71C1C; /* Rojo aún más oscuro para el menú móvil */
+        top: 70px; /* Debajo del header */
+        left: -100%; /* Empieza fuera de la pantalla (oculto) */
+        text-align: center;
+        transition: all 0.5s;
+        display: block; /* Cambiamos a block para que los ítems estén uno debajo del otro */
+        padding-top: 20px;
+    }
+
+    .menu-item {
+        margin: 50px 0;
+    }
+
+    .menu-item a {
+        font-size: 1.5rem; /* Letra más grande para tocar fácilmente */
+        display: block; /* Asegura que todo el <li> sea clicable */
+        padding: 15px 0;
+        border-bottom: none; /* Elimina el subrayado en móvil */
+    }
+    
+    .menu-item a:hover {
+        color: #FFC107; 
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil al hacer hover/tap */
+    }
+
+    /* Cuando el checkbox esté marcado, el menú se desliza desde la izquierda */
+    #check:checked ~ .nav.header .main-menu {
+        left: 0;
+    }
+}
+ 

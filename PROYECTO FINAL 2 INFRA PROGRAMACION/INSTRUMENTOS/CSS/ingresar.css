@@ -1,0 +1,119 @@
+/*
+========================================
+SECCIÓN DE INGRESO (LOGIN/REGISTRO)
+========================================
+*/
+
+.main-content {
+    /* Centra el contenedor principal en la pantalla, ocupando el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 80px); /* Ajusta la altura para que ocupe toda la pantalla menos el header */
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para el formulario */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-2px);
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    color: #e53935; /* Rojo fuerte */
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* --- CAMPOS DE FORMULARIO --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #e53935; /* Resaltado rojo al enfocar */
+    box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2);
+    outline: none;
+}
+
+/* --- BOTÓN DE ENVIAR --- */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #e53935; /* Rojo principal */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background-color: #d32f2f; /* Rojo ligeramente más oscuro al pasar el ratón */
+}
+
+.btn-login:active {
+    transform: translateY(1px); /* Efecto de "presión" al hacer clic */
+}
+
+/* --- ENLACES ADICIONALES --- */
+.login-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #e53935;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.login-footer a:hover {
+    color: #d32f2f;
+    text-decoration: underline;
+}
+
+/* --- Responsive (Ajuste en pantallas muy pequeñas) --- */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    .login-container h2 {
+        font-size: 1.7rem;
+    }
+}
